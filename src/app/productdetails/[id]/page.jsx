@@ -19,8 +19,7 @@ export default function ProductDetail() {
     const loadProduct = async () => {
       try {
         const data = await fetchProductById(id);
-        console.log(data);
-
+        
         if (!data) throw new Error("Product not found");
         setProduct(data);
       } catch (err) {
@@ -59,7 +58,7 @@ export default function ProductDetail() {
       />
       <h1 className="text-2xl font-bold mt-4">{product.title}</h1>
       <p className="text-white mt-6 text-lg">{product.description}</p>
-      <p className="text-xl font-bold mt-2">${product.price}</p>
+      <p className="text-xl font-bold mt-2">{product.price}</p>
 
 
       <div className="flex gap-4 mt-6">

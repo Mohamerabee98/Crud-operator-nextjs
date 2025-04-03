@@ -37,7 +37,7 @@ export default function Home() {
                     ? product.title.substring(0, 20) + "..."
                     : product.title}
                 </p>{" "}
-                <p className="font-bold text-blue-600">${product.price}</p>
+                <p className="font-bold text-blue-600">{product.price}</p>
               </div>
             </div>
           </Link>
